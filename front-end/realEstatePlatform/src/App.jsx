@@ -5,6 +5,8 @@ import PropertyList from './components/PropertyList'
 import { LoadScript } from '@react-google-maps/api';
 
 import './App.css'
+const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
           <Route path="/properties/:id" element={<PropertyDetails/>} />
           <Route path="/properties/new" element={<PropertyDetails/>} />
         </Routes>
-        <LoadScript googleMapsApiKey="YOUR API_KEY">
+        <LoadScript googleMapsApiKey={apiKey}>
           
         </LoadScript>
       </div>

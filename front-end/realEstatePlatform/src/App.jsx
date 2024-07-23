@@ -5,6 +5,7 @@ import PropertyList from './components/PropertyList'
 import { LoadScript } from '@react-google-maps/api';
 
 import './App.css'
+// API_KEY stored in .emv file 
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 

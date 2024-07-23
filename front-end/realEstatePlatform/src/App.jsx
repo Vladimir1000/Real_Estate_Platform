@@ -12,15 +12,15 @@ const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 function App() {
   return (
       <div>
+      <LoadScript googleMapsApiKey={apiKey}>
         <Routes>
           <Route path='/' element={<PropertyList/>} />
           <Route path="/search" element={<PropertySearch/>} />
           <Route path="/properties/:id" element={<PropertyDetails/>} />
           <Route path="/properties/new" element={<PropertyDetails/>} />
         </Routes>
-        <LoadScript googleMapsApiKey={apiKey}>
           
-        </LoadScript>
+      </LoadScript>
       </div>
   );
 }

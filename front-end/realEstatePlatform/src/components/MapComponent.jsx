@@ -28,3 +28,36 @@ const MapComponent = ({ lat, lng, onClick }) => {
 };
 
 export default MapComponent;
+// import React, { useEffect, useRef } from 'react';
+
+// const MapComponent = ({ lat, lng, onClick }) => {
+//   const mapRef = useRef(null);
+
+//   useEffect(() => {
+//     const loadMap = () => {
+//       if (window.google && window.google.maps) {
+//         const map = new window.google.maps.Map(mapRef.current, {
+//           center: { lat, lng },
+//           zoom: 12,
+//         });
+
+//         if (lat && lng) {
+//           new window.google.maps.marker.AdvancedMarkerElement({
+//             position: { lat, lng },
+//             map: map,
+//           });
+//         }
+
+//         window.google.maps.event.addListener(map, 'click', (event) => {
+//           onClick(event);
+//         });
+//       }
+//     };
+
+//     loadMap();
+//   }, [lat, lng, onClick]);
+
+//   return <div ref={mapRef} style={{ height: '100%', width: '100%' }} />;
+// };
+
+// export default MapComponent;

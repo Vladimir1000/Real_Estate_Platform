@@ -29,6 +29,8 @@ class Property(models.Model):
     status = models.CharField(max_length=20, default='active') # ex: active, sold
     price = models.DecimalField(max_digits=10, decimal_places=2)
     photo_url = models.CharField(max_length=200, default='../src/assets/defaultProperty.jpg')
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)  
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)  
 
     def __str__(self):
         return self.title

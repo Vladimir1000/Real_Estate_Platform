@@ -45,7 +45,7 @@ class PropertySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Property
-        fields = ('id', 'user', 'user_id', 'title', 'description', 'address', 'city', 'size', 'type', 'status', 'price', 'photo_url', 'bookings')
+        fields = ('id', 'user', 'user_id', 'title', 'description', 'address', 'city', 'size', 'type', 'status', 'price', 'photo_url', 'bookings', 'latitude', 'longitude')
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

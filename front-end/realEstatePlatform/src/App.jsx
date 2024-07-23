@@ -10,8 +10,8 @@ function App() {
         <Routes>
           <Route path='/' element={<PropertyList/>} />
           <Route path="/search" element={<PropertySearch/>} />
-          <Route path="/:id" element={<PropertyDetails/>} />
-          <Route path="/new" element={<PropertyDetails/>} />
+          <Route path="properties/:id" element={<PropertyDetails/>} />
+          <Route path="properties/new" element={<PropertyDetails/>} />
         </Routes>
       </div>
   );

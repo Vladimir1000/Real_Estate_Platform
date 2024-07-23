@@ -23,10 +23,11 @@ const PropertyDetails = () => {
   });
   const [isEditing, setIsEditing] = useState(false);
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     if (id !== 'new') {
-      axios.get(`${PROPERTY_PATH }/properties/${id}/`)
+      axios.get(`${PROPERTY_PATH}/properties/${id}/`)
         .then(response => {
           setProperty(response.data);
           setLoading(false);

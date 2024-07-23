@@ -1,10 +1,9 @@
 from rest_framework import serializers
 from .models import User, Property, Booking
 
-
 class BookingSerializer(serializers.HyperlinkedModelSerializer):
     property = serializers.HyperlinkedRelatedField(
-        view_name='property-details',
+        view_name='property-detail',
         read_only=True
     )
 
@@ -13,9 +12,20 @@ class BookingSerializer(serializers.HyperlinkedModelSerializer):
         source='property'
     )
 
+    user = serializers.HyperlinkedRelatedField(
+        view_name='user-detail',
+        read_only=True
+    )
+
+    user_id = serializers.PrimaryKeyRelatedField(
+        queryset=User.objects.all(),
+        source='user'
+    )
+
     class Meta:
         model = Booking
-        fields = '__all__'
+        fields = ('id', 'property', 'property_id', 'user', 'user_id', 'booking_date', 'status')
+
 
 class PropertySerializer(serializers.HyperlinkedModelSerializer):
     user = serializers.HyperlinkedRelatedField(
@@ -35,7 +45,7 @@ class PropertySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Property
-        fields = '__all__'
+        fields = ('id', 'user', 'user_id', 'title', 'description', 'address', 'city', 'size', 'type', 'status', 'price', 'photo_url', 'bookings')
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -50,4 +60,4 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ('id', 'user_name', 'password', 'email', 'user_photo','user_url', 'properties')

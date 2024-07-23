@@ -14,7 +14,7 @@ const MapComponent = ({ lat, lng, onClick }) => {
   };
 
   return (
-    <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
+    // <LoadScript googleMapsApiKey="AIzaSyDPKpKeUOdtVDPF1cxz_BX-6qDNHku4yvI">
       <GoogleMap
         mapContainerStyle={mapStyles}
         zoom={13}
@@ -23,7 +23,7 @@ const MapComponent = ({ lat, lng, onClick }) => {
       >
         <Marker position={defaultCenter} />
       </GoogleMap>
-    </LoadScript>
+    // </LoadScript>
   );
 };
 

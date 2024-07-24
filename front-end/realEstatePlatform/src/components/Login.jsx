@@ -39,7 +39,7 @@ export default function Login () {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const user = users.find(user => user.user_name === formState.username)
+    const user = users.find(user => user.user_name === formState.user_name)
     
     // Checks if user exists
     if (!user) {
@@ -70,7 +70,7 @@ export default function Login () {
 
       <form className="loginContainer" onSubmit={handleSubmit}>
         <div className="usernameLogin">
-        <input type="text" id="username" placeholder="User Name" onChange={handleChange} value={formState.username} />
+        <input type="text" id="username" placeholder="User Name" onChange={handleChange} value={formState.user_name} />
         </div>
 
         <div className="passwordLogin">

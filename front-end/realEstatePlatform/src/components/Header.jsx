@@ -56,37 +56,37 @@ const Header = () => {
         };
     }, []);
 
-    const handleSearchChange = (e) => {
-        setSearchQuery(e.target.value);
-    };
+    // const handleSearchChange = (e) => {
+    //     setSearchQuery(e.target.value);
+    // };
 
-    const handleSearchSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.get(`${PROPERTY_PATH}/properties/search/`, { params: { query: searchQuery } });
-            const properties = response.data;
+    // const handleSearchSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         const response = await axios.get(`${PROPERTY_PATH}/properties/search/`, { params: { query: searchQuery } });
+    //         const properties = response.data;
 
-            if (properties.length > 0) {
-                navigate(`/property/${properties[0].id}`);
-            } else {
-                const potentialMatches = properties.map(property => ({
-                    ...property,
-                    similarity: Levenshtein.get(searchQuery.trim().toLowerCase(), property.title.toLowerCase())
-                }));
-                potentialMatches.sort((a, b) => a.similarity - b.similarity);
+    //         if (properties.length > 0) {
+    //             navigate(`/property/${properties[0].id}`);
+    //         } else {
+    //             const potentialMatches = properties.map(property => ({
+    //                 ...property,
+    //                 similarity: Levenshtein.get(searchQuery.trim().toLowerCase(), property.title.toLowerCase())
+    //             }));
+    //             potentialMatches.sort((a, b) => a.similarity - b.similarity);
 
-                navigate('/search', {
-                    state: {
-                        searchQuery,
-                        potentialMatches
-                    }
-                });
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            alert('There was an error processing your search.');
-        }
-    };
+    //             navigate('/search', {
+    //                 state: {
+    //                     searchQuery,
+    //                     potentialMatches
+    //                 }
+    //             });
+    //         }
+    //     } catch (error) {
+    //         console.error('Error fetching data:', error);
+    //         alert('There was an error processing your search.');
+    //     }
+    // };
 
     const toggleUserMenu = () => {
         setShowUserMenu(!showUserMenu);

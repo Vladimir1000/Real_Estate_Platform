@@ -144,7 +144,7 @@ const Header = () => {
                         <img onClick={toggleUserMenu} src={userData.user_photo} alt="User" />
                         {showUserMenu && (
                             <ul className="dropdown">
-                                <li onClick={() => navigate(`/user/${loggedInUser}`)}>My Properties</li>
+                                {/* <li onClick={() => navigate(`/user/${loggedInUser}`)}>My Properties</li> */}
                                 <li onClick={handleLogout}>Logout</li>
                             </ul>
                         )}
@@ -169,6 +169,8 @@ const Header = () => {
 };
 
 const PropertySearch = () => {
+    const navigate = useNavigate();
+
     const [searchParams, setSearchParams] = useState({
         price_min: '',
         price_max: '',
@@ -192,7 +194,13 @@ const PropertySearch = () => {
                 setResults(response.data);
             })
             .catch(error => console.log(error));
+
     };
+
+    const handlePropertyClick = (id) => {
+        navigate(`/properties/${id}`)
+      }
+    
 
     return (
         <div>
@@ -229,10 +237,13 @@ const PropertySearch = () => {
 
             <div>
                 {results.map(property => (
-                    <div key={property.id}>
-                        <h3>{property.title}</h3>
-                        <p>{property.address}</p>
+                    <div key={property.id} className='property-card'
+                    onClick={() => handlePropertyClick(property.id)}
+                    >
+                    <h3>{property.title}</h3>
+                    <p>{property.address}</p>
                     </div>
+
                 ))}
             </div>
         </div>

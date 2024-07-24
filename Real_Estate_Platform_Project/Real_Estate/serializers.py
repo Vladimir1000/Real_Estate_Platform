@@ -61,3 +61,11 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'user_name', 'password', 'email', 'user_photo','user_url', 'properties')
+
+class UserPropertySerializer(serializers.Serializer):
+    property_id = serializers.IntegerField()
+
+    def validate_property_id(self, value):
+        if not Property.objects.filter(id=value).exists():
+            raise serializers.ValidationError("Property does not exist")
+        return value

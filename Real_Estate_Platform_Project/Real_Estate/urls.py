@@ -10,5 +10,9 @@ urlpatterns = [
     path('bookings/', views.BookingList.as_view(), name='booking-list'),
     path('bookings/<int:pk>/', views.BookingDetail.as_view(), name='booking-detail'),
     path('properties/search/', views.PropertySearch.as_view(), name='property-search'), 
+    # path('users/<int:user_id>/bookings/', views.add_property_to_user, name='add_property_to_user'),
+    # path('users/<int:user_id>/bookings/', views.remove_property_from_user, name='remove_property_from_user')
+
+
 
 ]

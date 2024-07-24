@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class User(models.Model):
     user_name = models.CharField(max_length=50)
     password = models.CharField(max_length=30)
@@ -15,8 +16,10 @@ class User(models.Model):
     user_type = models.CharField(max_length=10, choices=USER_TYPE_CHOICES, default=BUYER)
     user_photo = models.CharField(max_length=200, default='../src/assets/defaultUser.jpg')
 
+
     def __str__(self):
         return self.user_name
+    
 
 class Property(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='property')
@@ -34,12 +37,14 @@ class Property(models.Model):
 
     def __str__(self):
         return self.title
-
+    
 class Booking(models.Model):
     property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='booking')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='booking')
     booking_date = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=20, default='pending') #ex: pending, confirmed, cancelled
+    # properties = models.ManyToManyField(User, related_name='users')
+
 
     def __str__(self):
         return f'Booking for {self.property.title} by {self.user.user_name}'

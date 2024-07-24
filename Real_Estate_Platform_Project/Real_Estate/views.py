@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from rest_framework import generics
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 from .models import User, Property, Booking
-from .serializers import UserSerializer, PropertySerializer, BookingSerializer
+from .serializers import UserSerializer, PropertySerializer, BookingSerializer, UserPropertySerializer
 
 class UserList(generics.ListCreateAPIView):
     queryset = User.objects.all()
@@ -50,3 +53,26 @@ class PropertySearch(generics.ListAPIView):
             queryset = queryset.filter(address__icontains=address)
         
         return queryset
+    
+    #---------------Add Bookings to user profiles----------------------
+# @api_view(['POST'])
+# def add_property_to_user(request, user_id):
+#     user = Booking.objects.get(id=user_id)
+#     serializer = UserPropertySerializer(data=request.data)
+#     if serializer.is_valid():
+#         property_id = serializer.validated_data['property_id']
+#         property = Property.objects.get(id=property_id)
+#         user.properties.add(property)
+#         return Response({'status': 'Property added'}, status=status.HTTP_200_OK)
+#     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# @api_view(['POST'])
+# def remove_property_from_user(request, user_id):
+#     user = Booking.objects.get(id=user_id)
+#     serializer = UserPropertySerializer(data=request.data)
+#     if serializer.is_valid():
+#         property_id = serializer.validated_data['property_id']
+#         property = Property.objects.get(id=property_id)
+#         user.properties.remove(property)
+#         return Response({'status': 'Property removed'}, status=status.HTTP_200_OK)
+#     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

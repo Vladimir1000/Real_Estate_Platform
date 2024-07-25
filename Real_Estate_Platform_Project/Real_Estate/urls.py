@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from . import views 
 from rest_framework.routers import DefaultRouter
 
 urlpatterns = [
@@ -12,6 +12,7 @@ urlpatterns = [
     path('properties/search/', views.PropertySearch.as_view(), name='property-search'), 
     # path('users/<int:user_id>/bookings/', views.add_property_to_user, name='add_property_to_user'),
     # path('users/<int:user_id>/bookings/', views.remove_property_from_user, name='remove_property_from_user')
+    path('bookings/create/', views.CreateBookingView.as_view(), name='create-booking')
 
 
 

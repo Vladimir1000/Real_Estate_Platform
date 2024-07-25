@@ -21,6 +21,7 @@ function App() {
           <Route path="/properties/search" element={<PropertySearch/>} />
           <Route path="/properties/:id" element={<PropertyDetails/>} />
           <Route path="/properties/new" element={<PropertyDetails/>} />
+          <Route path="/bookings" element={<PropertyDetails />} />
         </Routes>
       </LoadScript>
       </div>

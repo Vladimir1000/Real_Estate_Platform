@@ -25,6 +25,7 @@ class BookingSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Booking
         fields = ('id', 'property', 'property_id', 'user', 'user_id', 'booking_date', 'status')
+        
 
 
 class PropertySerializer(serializers.HyperlinkedModelSerializer):

@@ -244,7 +244,7 @@ export default function PropertyDetails() {
     });
     const [isEditing, setIsEditing] = useState(false);
     const [loading, setLoading] = useState(true);
-    // const [userProperties, setUserProperties] = useState([]);
+    const [userProperties, setUserProperties] = useState([]);
 
     useEffect(() => {
         if (id && id !== 'new') {
@@ -259,23 +259,23 @@ export default function PropertyDetails() {
         }
     }, [id]);
 
-    // useEffect(() => {
-    //   const getUserProperties = async () => {
-    //       try {
-    //           const response = await axios.get(`http://127.0.0.1:8000/users/${loggedInUser}`);
-    //           if (response.data.properties && Array.isArray(response.data.properties)) {
-    //               const properties = await Promise.all(
-    //                   response.data.properties.map(propertyUrl => axios.get(propertyUrl))
-    //               );
-    //               setUserProperties(properties.map(propertyResponse => propertyResponse.data));
-    //           }
-    //       } catch (error) {
-    //           console.error('Could not fetch user properties', error);
-    //       }
-    //   };
-    //   getUserProperties();
+    useEffect(() => {
+      const getUserProperties = async () => {
+          try {
+              const response = await axios.get(`http://127.0.0.1:8000/users/${loggedInUser}`);
+              if (response.data.properties && Array.isArray(response.data.properties)) {
+                  const properties = await Promise.all(
+                      response.data.properties.map(propertyUrl => axios.get(propertyUrl))
+                  );
+                  setUserProperties(properties.map(propertyResponse => propertyResponse.data));
+              }
+          } catch (error) {
+              console.error('Could not fetch user properties', error);
+          }
+      };
+      getUserProperties();
 
-    // }, [loggedInUser]);
+    }, [loggedInUser]);
   
 
     const handleChange = (e) => {
@@ -310,26 +310,26 @@ export default function PropertyDetails() {
         });
     };
 
-    // const addToMyProperties = async (propertyId) => {
-    //   try {
-    //     await axios.post(`http://127.0.0.1:8000/users/${loggedInUser}/bookings/`, { property_id: propertyId });
-    //     console.log(`http://127.0.0.1:8000/users/${loggedInUser}`)
-    //     setUserProperties([...userProperties, property]);
-    //   } catch (error) {
-    //     console.error('Could not add property to user', error);
-    //   }
-    // };
+    const addToMyProperties = async (propertyId) => {
+      try {
+        await axios.post(`http://127.0.0.1:8000/users/${loggedInUser}/bookings/`, { property_id: propertyId });
+        console.log(`http://127.0.0.1:8000/users/${loggedInUser}`)
+        setUserProperties([...userProperties, property]);
+      } catch (error) {
+        console.error('Could not add property to user', error);
+      }
+    };
   
-    // const removeFromMyProperties = async (propertyId) => {
-    //   try {
-    //     await axios.post(`http://127.0.0.1:8000/users/${loggedInUser}/bookings/`, { property_id: propertyId });
-    //     setUserProperties(userProperties.filter(p => p.id !== propertyId));
-    //   } catch (error) {
-    //     console.error('Could not remove property from user', error);
-    //   }
-    // };
+    const removeFromMyProperties = async (propertyId) => {
+      try {
+        await axios.post(`http://127.0.0.1:8000/users/${loggedInUser}/bookings/`, { property_id: propertyId });
+        setUserProperties(userProperties.filter(p => p.id !== propertyId));
+      } catch (error) {
+        console.error('Could not remove property from user', error);
+      }
+    };
   
-    // const isUserManaging = userProperties.some(p => p.id === property.id);
+    const isUserManaging = userProperties.some(p => p.id === property.id);
   
 
     if (loading) {
@@ -389,13 +389,13 @@ export default function PropertyDetails() {
                 </form>
             ) : (
                   <>
-                    {/* {loggedInUser && (
+                    {loggedInUser && (
                       isUserManaging ? (
                         <button className="manageButton" onClick={() => removeFromMyProperties(property.id)}>Stop Managing</button>
                       ) : (
                         <button className="manageButton" onClick={() => addToMyProperties(property.id)}>Manage</button>
                       )
-                    )} */}
+                    )}
                     <h1>{property.title}</h1>
                     <h2>Address: {property.address} {property.city}</h2>
                     <p>Description: {property.description}</p>
@@ -423,6 +423,7 @@ export default function PropertyDetails() {
 // import MapComponent from './MapComponent';
 // import PropertyForm from './PropertyForm';
 // import PropertyInfo from './PropertyInfo';
+// import Nav from "./Nav";
 
 // const PROPERTY_PATH = "http://127.0.0.1:8000/properties/";
 
@@ -497,6 +498,7 @@ export default function PropertyDetails() {
 
 //   return (
 //     <div className="propertyDetails">
+//         <Nav />
 //       {isEditing ? (
 //         <PropertyForm property={property} handleChange={handleChange} handleSubmit={handleSubmit} />
 //       ) : (

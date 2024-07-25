@@ -37,6 +37,10 @@ const PropertySearch = () => {
 
   return (
     <div>
+        <div>
+            <button onClick={() => navigate('/')}>HOME</button>
+            <button onClick={() => navigate('/properties')}>PROPERTIES</button>
+        </div>
       <h2>Search Properties</h2>
       <input
         type="text"

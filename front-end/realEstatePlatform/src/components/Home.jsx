@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
+import PropertySearch from './PropertySearch';
 import Levenshtein from 'fast-levenshtein';
 // here I should import my Logo when it is ready
 // import './header.css';
@@ -137,8 +138,8 @@ const Header = () => {
                 <button className='searchBtn' type='submit'>Search</button>
             </form> */}
             <div className="headerLinks">
-                <button onClick={() => navigate('/')}>HOME</button>
-                <button onClick={() => navigate('/properties')}>PROPERTIES</button>
+                {/* <button onClick={() => navigate('/')}>HOME</button>
+                <button onClick={() => navigate('/properties')}>PROPERTIES</button> */}
                 {loggedInUser ? (
                     <div className="userMenu" ref={userMenuRef}>
                         <img onClick={toggleUserMenu} src={userData.user_photo} alt="User" />
@@ -168,86 +169,86 @@ const Header = () => {
     );
 };
 
-const PropertySearch = () => {
+// const PropertySearch = () => {
     
-    const navigate = useNavigate();
-    const [searchParams, setSearchParams] = useState({
-        price_min: '',
-        price_max: '',
-        city: '',
-        address: ''
-    });
+//     const navigate = useNavigate();
+//     const [searchParams, setSearchParams] = useState({
+//         price_min: '',
+//         price_max: '',
+//         city: '',
+//         address: ''
+//     });
 
-    const [results, setResults] = useState([]);
+//     const [results, setResults] = useState([]);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setSearchParams({
-            ...searchParams,
-            [name]: value
-        });
-    };
+//     const handleChange = (e) => {
+//         const { name, value } = e.target;
+//         setSearchParams({
+//             ...searchParams,
+//             [name]: value
+//         });
+//     };
 
-    const handleSearch = () => {
-        axios.get(`${PROPERTY_PATH}/properties/search/`, { params: searchParams })
-            .then(response => {
-                setResults(response.data);
-            })
-            .catch(error => console.log(error));
+//     const handleSearch = () => {
+//         axios.get(`${PROPERTY_PATH}/properties/search/`, { params: searchParams })
+//             .then(response => {
+//                 setResults(response.data);
+//             })
+//             .catch(error => console.log(error));
 
-    };
+//     };
 
-    const handlePropertyClick = (id) => {
-        navigate(`/properties/${id}`)
-      }
+//     const handlePropertyClick = (id) => {
+//         navigate(`/properties/${id}`)
+//       }
     
 
-    return (
-        <div>
-            <h2>Search Properties</h2>
-            <input
-                type="text"
-                name="price_min"
-                value={searchParams.price_min}
-                onChange={handleChange}
-                placeholder="Min Price"
-            />
-            <input
-                type="text"
-                name="price_max"
-                value={searchParams.price_max}
-                onChange={handleChange}
-                placeholder="Max Price"
-            />
-            <input
-                type="text"
-                name="city"
-                value={searchParams.city}
-                onChange={handleChange}
-                placeholder="City"
-            />
-            <input
-                type="text"
-                name="address"
-                value={searchParams.address}
-                onChange={handleChange}
-                placeholder="Address"
-            />
-            <button onClick={handleSearch}>Search</button>
+//     return (
+//         <div>
+//             <h2>Search Properties</h2>
+//             <input
+//                 type="text"
+//                 name="price_min"
+//                 value={searchParams.price_min}
+//                 onChange={handleChange}
+//                 placeholder="Min Price"
+//             />
+//             <input
+//                 type="text"
+//                 name="price_max"
+//                 value={searchParams.price_max}
+//                 onChange={handleChange}
+//                 placeholder="Max Price"
+//             />
+//             <input
+//                 type="text"
+//                 name="city"
+//                 value={searchParams.city}
+//                 onChange={handleChange}
+//                 placeholder="City"
+//             />
+//             <input
+//                 type="text"
+//                 name="address"
+//                 value={searchParams.address}
+//                 onChange={handleChange}
+//                 placeholder="Address"
+//             />
+//             <button onClick={handleSearch}>Search</button>
 
-            <div>
-                {results.map(property => (
-                    <div key={property.id} className='property-card'
-                    onClick={() => handlePropertyClick(property.id)}
-                    >
-                    <h3>{property.title}</h3>
-                    <p>{property.address}</p>
-                    </div>
+//             <div>
+//                 {results.map(property => (
+//                     <div key={property.id} className='property-card'
+//                     onClick={() => handlePropertyClick(property.id)}
+//                     >
+//                     <h3>{property.title}</h3>
+//                     <p>{property.address}</p>
+//                     </div>
 
-                ))}
-            </div>
-        </div>
-    );
-};
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// };
 
 export default Header;

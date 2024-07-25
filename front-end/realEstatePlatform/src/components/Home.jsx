@@ -169,8 +169,8 @@ const Header = () => {
 };
 
 const PropertySearch = () => {
+    
     const navigate = useNavigate();
-
     const [searchParams, setSearchParams] = useState({
         price_min: '',
         price_max: '',

@@ -218,6 +218,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import MapComponent from './MapComponent';
+import Nav from "./Nav";
+
 
 
 const PROPERTY_PATH = "http://127.0.0.1:8000/properties/";
@@ -336,6 +338,7 @@ export default function PropertyDetails() {
 
     return (
         <div className="propertyDetails">
+            <Nav />
             {isEditing ? (
                 <form onSubmit={handleSubmit}>
                     <label>
@@ -394,7 +397,7 @@ export default function PropertyDetails() {
                       )
                     )} */}
                     <h1>{property.title}</h1>
-                    <h2>Address: {property.address}, {property.city}</h2>
+                    <h2>Address: {property.address} {property.city}</h2>
                     <p>Description: {property.description}</p>
                     <p>Size: {property.size} sq.ft</p>
                     <p>Type: {property.type}</p>

@@ -1,10 +1,10 @@
-#root {
+ #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +39,185 @@
 
 .read-the-docs {
   color: #888;
+} */
+/* styles.css */
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Header Styling */
+.header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.header img.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.header .searchForm {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.header .searchForm input {
+  width: 80%;
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.header .searchForm button {
+  padding: 10px;
+}
+
+.header .headerLinks {
+  display: flex;
+  align-items: center;
+}
+
+.header .headerLinks button {
+  margin-left: 10px;
+}
+
+.header .userMenu {
+  position: relative;
+}
+
+.header .userMenu img {
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header .userMenu .dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  color: black;
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+}
+
+.header .userMenu .dropdown li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.header .userMenu .dropdown li:hover {
+  background-color: #f4f4f4;
+}
+
+.header .userMenu:hover .dropdown {
+  display: block;
+}
+
+/* Property Details Styling */
+.propertyDetails {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.propertyDetails label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.propertyDetails input, 
+.propertyDetails textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.propertyDetails img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.propertyDetails .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Property Search Styling */
+.propertySearch {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.propertySearch input {
+  width: calc(25% - 10px);
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.propertySearch button {
+  padding: 10px;
+}
+
+.propertySearch .results {
+  margin-top: 20px;
+}
+
+.propertySearch .results .resultItem {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.propertySearch .results .resultItem:hover {
+  background-color: #f1f1f1;
 }

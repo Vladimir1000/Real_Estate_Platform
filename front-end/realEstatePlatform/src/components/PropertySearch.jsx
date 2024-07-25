@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const PROPERTY_PATH = 'http://127.0.0.1:8000'
 
@@ -12,6 +13,7 @@ const PropertySearch = () => {
   });
 
   const [results, setResults] = useState([]);
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,6 +30,10 @@ const PropertySearch = () => {
       })
       .catch(error => console.log(error));
   };
+
+  const handlePropertyClick = (id) => {
+    navigate(`/properties/${id}`)
+  }
 
   return (
     <div>
@@ -64,10 +70,12 @@ const PropertySearch = () => {
 
       <div>
         {results.map(property => (
-          <div key={property.id}>
+            <div key={property.id} className='property-card'
+            onClick={() => handlePropertyClick(property.id)}
+            >
             <h3>{property.title}</h3>
             <p>{property.address}</p>
-          </div>
+            </div>
         ))}
       </div>
     </div>
@@ -75,3 +83,5 @@ const PropertySearch = () => {
 };
 
 export default PropertySearch;
+
+

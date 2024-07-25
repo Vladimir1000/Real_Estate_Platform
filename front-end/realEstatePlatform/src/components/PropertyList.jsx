@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 
 const PROPERTY_PATH = 'http://127.0.0.1:8000/properties';
 
@@ -35,6 +36,7 @@ export default function Properties() {
 
   return (
     <div className="properties">
+      <Nav />
       <h1>Properties Page</h1>
       <button onClick={handleCreate}>Create New Property</button>
       <div className="property-grid">

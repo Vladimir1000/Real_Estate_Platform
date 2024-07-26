@@ -4,7 +4,7 @@ import axios from 'axios';
 import PropertySearch from './PropertySearch';
 import Levenshtein from 'fast-levenshtein';
 // here I should import my Logo when it is ready
-// import './header.css';
+import './Home.css';
 
 const PROPERTY_PATH = 'http://127.0.0.1:8000';
 

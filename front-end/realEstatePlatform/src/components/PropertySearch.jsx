@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './PropertySearch.css'
 
 const PROPERTY_PATH = 'http://127.0.0.1:8000'
 
@@ -37,9 +38,9 @@ const PropertySearch = () => {
 
   return (
     <div>
-        <div>
-            <button onClick={() => navigate('/')}>HOME</button>
-            <button onClick={() => navigate('/properties')}>PROPERTIES</button>
+        <div className='home-buttons'>
+            <button className="home" onClick={() => navigate('/')}>HOME</button>
+            <button className="properties" onClick={() => navigate('/properties')}>PROPERTIES</button>
         </div>
       <h2>Search Properties</h2>
       <input

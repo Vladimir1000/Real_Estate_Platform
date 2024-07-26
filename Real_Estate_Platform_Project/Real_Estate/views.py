@@ -36,35 +36,35 @@ class CreateBookingView(generics.CreateAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
 
-def perform_create(self, serializer):
-    property_id = self.request.data.get('property_id')
-    user_id = self.request.data.get('user_id')
-    property_instance = Property.objects.get(id=property_id)
-    user_instance = User.objects.get(id=user_id)
-    serializer.save(property=property_instance, user=user_instance)
+    def perform_create(self, serializer):
+        property_id = self.request.data.get('property_id')
+        user_id = self.request.data.get('user_id')
+        property_instance = Property.objects.get(id=property_id)
+        user_instance = User.objects.get(id=user_id)
+        serializer.save(property=property_instance, user=user_instance)
 
     #-----------Search Functionality-----------------------
 
 class PropertySearch(generics.ListAPIView):
     serializer_class = PropertySerializer
 
-def get_queryset(self):
-    queryset = Property.objects.all()
-    price_min = self.request.query_params.get('price_min', None)
-    price_max = self.request.query_params.get('price_max', None)
-    city = self.request.query_params.get('city', None)
-    address = self.request.query_params.get('address', None)
-    
-    if price_min is not None:
-        queryset = queryset.filter(price__gte=price_min)
-    if price_max is not None:
-        queryset = queryset.filter(price__lte=price_max)
-    if city is not None:
-        queryset = queryset.filter(city__icontains=city)
-    if address is not None:
-        queryset = queryset.filter(address__icontains=address)
-    
-    return queryset
+    def get_queryset(self):
+        queryset = Property.objects.all()
+        price_min = self.request.query_params.get('price_min', None)
+        price_max = self.request.query_params.get('price_max', None)
+        city = self.request.query_params.get('city', None)
+        address = self.request.query_params.get('address', None)
+        
+        if price_min is not None:
+            queryset = queryset.filter(price__gte=price_min)
+        if price_max is not None:
+            queryset = queryset.filter(price__lte=price_max)
+        if city is not None:
+            queryset = queryset.filter(city__icontains=city)
+        if address is not None:
+            queryset = queryset.filter(address__icontains=address)
+        
+        return queryset
     
     #---------------Add Bookings to user profiles----------------------
 # @api_view(['POST'])

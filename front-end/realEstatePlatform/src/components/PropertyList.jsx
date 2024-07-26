@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Nav from "./Nav";
+import './PropertyList.css'
 
 const PROPERTY_PATH = 'http://127.0.0.1:8000/properties';
 

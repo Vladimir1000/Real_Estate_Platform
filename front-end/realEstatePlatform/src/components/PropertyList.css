@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400&display=swap');
-
+/* 
 body {
-  background-color: #f5f5dc;     
+  background-color: rgba(128, 162, 236, 0.678);     
   background-image:  
     linear-gradient(45deg, #f5f5dc 25%, transparent 25%),
     linear-gradient(-45deg, #f5f5dc 25%, transparent 25%),
@@ -12,7 +12,7 @@ body {
   color: #4b2e2e;              
   font-family: Arial, sans-serif;
   line-height: 1.6;
-}
+} */
 
 .properties {
   max-width: 1200px;
@@ -36,7 +36,7 @@ body {
   margin-top: 10px;
   font-size: 16px;
   color: black;
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -56,7 +56,7 @@ body {
 }
 
 .property-card {
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(75, 46, 46, 0.1);
   padding: 1.5rem;
@@ -107,26 +107,26 @@ body {
   margin-top: 1rem;
 }
 
-.property-card::after {
+/* .property-card::after {
   content: '';
   display: block;
   height: 4px;
   background: linear-gradient(90deg, #7a7cdd, #ffdb58);
   margin-top: 1rem;
   border-radius: 2px;
-}
+} */
 
 .property-card:hover h2 {
   color: #4b4848; 
 }
 
-.highlight {
+/* .highlight {
   background: linear-gradient(90deg, #ffdb58, #ff4500);
   color: #4b2e2e;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-weight: bold;
-}
+} */
 
 @media (max-width: 768px) {
   .property-grid {

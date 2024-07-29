@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400&display=swap');
 
 .Nav {
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
-  border-bottom: 3px solid ;
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
+  /* border-bottom: 3px solid ; */
   padding: 5px;
-  box-shadow: 0 4px 6px rgba(75, 46, 46, 0.1);
+  box-shadow: 0 4px 6px #4b2e2e1a;
 }
 
 .Nav ul {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 2rem;
+  justify-content: space-around;
   margin: 0;
 }
 
@@ -21,7 +21,7 @@
 
 .Nav a {
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   font-family: 'Amatic SC', cursive;
   font-size: 1.5rem;
   transition: color 0.3s;

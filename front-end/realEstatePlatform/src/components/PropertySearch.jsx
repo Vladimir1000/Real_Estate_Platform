@@ -39,8 +39,8 @@ const PropertySearch = () => {
   return (
     <div>
         <div className='home-buttons'>
-            <button className="home" onClick={() => navigate('/')}>HOME</button>
-            <button className="properties" onClick={() => navigate('/properties')}>PROPERTIES</button>
+            <button className="home-button" onClick={() => navigate('/')}>HOME</button>
+            <button className="properties-button" onClick={() => navigate('/properties')}>PROPERTIES</button>
         </div>
       <h2>Search Properties</h2>
       <input

@@ -13,7 +13,32 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
+/* --------------------------------------------- */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 
+.home-button, .properties-button {
+  background: linear-gradient(135deg, #ffdb58, #ffbb33);
+  color: #4b2e2e;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.home-button:hover, .properties-button:hover {
+  background-color: #ff4500;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------- */
 button {
   margin-bottom: 20px;
   margin-top: 10px;
@@ -23,11 +48,13 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background-color: #ff4500;
+   background-color: #ff4500;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 
@@ -106,4 +133,15 @@ input[type="text"] {
   .property-card {
     margin-bottom: 1rem;
   }
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .home-button, .properties-button {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
 }
+

@@ -137,37 +137,41 @@ const Header = () => {
                 />
                 <button className='searchBtn' type='submit'>Search</button>
             </form> */}
-            <div className="headerLinks">
-                {/* <button onClick={() => navigate('/')}>HOME</button>
-                <button onClick={() => navigate('/properties')}>PROPERTIES</button> */}
-                {loggedInUser ? (
-                    <div className="userMenu" ref={userMenuRef}>
-                        <img onClick={toggleUserMenu} src={userData.user_photo} alt="User" />
-                        {showUserMenu && (
-                            <ul className="dropdown">
-                                {/* <li onClick={() => navigate(`/user/${loggedInUser}`)}>My Properties</li> */}
-                                <li onClick={handleLogout}>Logout</li>
-                            </ul>
-                        )}
-                    </div>
-                ) : (
-                    <button onClick={toggleLoginForm}>Log In</button>
-                )}
-                {showLoginForm && (
-                    <div className="loginOverlay" ref={loginFormRef}>
-                        <form className="loginForm" onSubmit={handleLoginSubmit}>
-                            <input type="text" id="username" placeholder="User Name" onChange={handleLoginChange} />
-                            <input type="password" id="password" placeholder="Enter your password" onChange={handleLoginChange} />
-                            {formState.error && <p style={{ color: 'red' }}>{formState.error}</p>}
-                            <button type="submit">Log in</button>
-                        </form>
-                    </div>
-                )}
+            <div className='home'>
+                <div className="headerLinks">
+                    {/* <button onClick={() => navigate('/')}>HOME</button>
+                    <button onClick={() => navigate('/properties')}>PROPERTIES</button> */}
+                    {loggedInUser ? (
+                        <div className="userMenu" ref={userMenuRef}>
+                            <img onClick={toggleUserMenu} src={userData.user_photo} alt="User" />
+                            {showUserMenu && (
+                                <ul className="dropdown">
+                                    {/* <li onClick={() => navigate(`/user/${loggedInUser}`)}>My Properties</li> */}
+                                    <li onClick={handleLogout}>Logout</li>
+                                </ul>
+                            )}
+                        </div>
+                    ) : (
+                        <button onClick={toggleLoginForm}>Log In</button>
+                    )}
+                    {showLoginForm && (
+                        <div className="loginOverlay" ref={loginFormRef}>
+                            <form className="loginForm" onSubmit={handleLoginSubmit}>
+                                <input type="text" id="username" placeholder="User Name" onChange={handleLoginChange} />
+                                <input type="password" id="password" placeholder="Enter your password" onChange={handleLoginChange} />
+                                {formState.error && <p style={{ color: 'red' }}>{formState.error}</p>}
+                                <button type="submit">Log in</button>
+                            </form>
+                        </div>
+                    )}
+                </div>
             </div>
             <PropertySearch />
         </div>
     );
 };
+
+export default Header;
 
 // const PropertySearch = () => {
     
@@ -251,4 +255,4 @@ const Header = () => {
 //     );
 // };
 
-export default Header;
+// export default Header;

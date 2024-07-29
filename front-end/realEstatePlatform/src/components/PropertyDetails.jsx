@@ -292,6 +292,7 @@ export default function PropertyDetails() {
         e.preventDefault();
         if (id && id !== 'new') {
             await axios.put(`${PROPERTY_PATH}${id}/`, property);
+            navigate(`/properties`)
         } else {
             const response = await axios.post(PROPERTY_PATH, property);
             navigate(`/properties/${response.data.id}`);

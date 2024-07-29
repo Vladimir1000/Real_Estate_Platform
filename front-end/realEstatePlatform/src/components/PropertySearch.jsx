@@ -71,7 +71,7 @@ const PropertySearch = () => {
         onChange={handleChange}
         placeholder="Address"
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className="search-button" onClick={handleSearch}>SEARCH</button>
 
       <div>
         {results.map(property => (
@@ -79,7 +79,11 @@ const PropertySearch = () => {
             onClick={() => handlePropertyClick(property.id)}
             >
             <h3>{property.title}</h3>
+            <p>{property.city}</p>
             <p>{property.address}</p>
+            <p>{property.status}</p>
+            <p>{property.type}</p>
+            <img src={property.photo_url} alt={property.title} />
             </div>
         ))}
       </div>

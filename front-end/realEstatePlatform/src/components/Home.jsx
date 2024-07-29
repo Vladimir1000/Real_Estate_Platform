@@ -15,7 +15,7 @@ const Header = () => {
     const [users, setUsers] = useState([]);
     const loginFormRef = useRef(null);
     const userMenuRef = useRef(null);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const loggedInUser = localStorage.getItem('loggedInUser');
 
     useEffect(() => {
@@ -106,7 +106,7 @@ const Header = () => {
                             )}
                         </div>
                     ) : (
-                        <button onClick={toggleLoginForm}>LogIn</button>
+                        <button className='logIn' onClick={toggleLoginForm}>LogIn</button>
                     )}
                     {showLoginForm && (
                         <div className="loginOverlay" ref={loginFormRef}>

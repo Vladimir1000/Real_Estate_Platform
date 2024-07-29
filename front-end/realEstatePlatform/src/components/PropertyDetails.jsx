@@ -187,7 +187,7 @@ export default function PropertyDetails() {
                             Longitude:
                             <input type="text" name="longitude" value={property.longitude} onChange={handleChange} required />
                         </label>
-                        <button type="submit">{id && id !== 'new' ? 'Update' : 'Create'} Property</button>
+                        <button className="submit" type="submit">{id && id !== 'new' ? 'Update' : 'Create'} Property</button>
                     </form>
                 ) : (
                     <>

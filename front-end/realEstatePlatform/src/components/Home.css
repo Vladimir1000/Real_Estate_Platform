@@ -21,10 +21,10 @@ body {
 }
 
 .headerLinks button {
-  background: none;
   border: none;
   color: #000000;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Poppins', cursive;
+  font-weight: bold;
   font-size: 1.5rem;
   margin-left: 1rem;
   cursor: pointer;
@@ -32,7 +32,7 @@ body {
 }
 
 .headerLinks button:hover {
-  color: #589bff;
+  color: #fcfcfc;
 }
 
 .userMenu {

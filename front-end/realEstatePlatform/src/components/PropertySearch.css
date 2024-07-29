@@ -56,6 +56,10 @@ button:hover {
   transform: scale(1.05);
 }
 
+.search-button {
+  padding: 0.8em;
+}
+
 
 .property-card {
   background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
@@ -86,9 +90,10 @@ button:hover {
 }
 
 .property-card h3 {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Poppins', cursive;
+  font-weight: bold;
   color: #000000;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   font-size: 1.5rem;
   letter-spacing: 1px;
   position: relative;
@@ -102,10 +107,11 @@ button:hover {
 }
 
 h2 {
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Poppins', cursive;
   color: #000000;
   margin-bottom: 2rem;
   font-size: 2rem;
+  font-weight: bold;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(75, 46, 46, 0.1);
   line-height: 1.4;

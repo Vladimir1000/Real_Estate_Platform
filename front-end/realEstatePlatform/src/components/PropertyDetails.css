@@ -26,7 +26,8 @@
 }
 
 .propertyDetails h1 {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Poppins', cursive;
+  font-weight: bold;
   color: #000000;
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -37,7 +38,8 @@
 }
 
 .propertyDetails h2 {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Poppins', cursive;
+  font-weight: bold;
   color: #000000;
   font-size: 2.5rem;
   margin-top: 2rem;
@@ -131,6 +133,13 @@
 }
 
 .propertyDetails .bookingButton:hover {
+  background-color: #000000;
+  color: white;
+}
+
+
+
+.propertyDetails .submit:hover{
   background-color: #000000;
   color: white;
 }

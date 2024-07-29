@@ -15,7 +15,7 @@ const MapComponent = ({ lat, lng, onClick }) => {
   return (
       <GoogleMap
         mapContainerStyle={mapStyles}
-        zoom={13}
+        zoom={15}
         center={defaultCenter}
         onClick={onClick}
       >

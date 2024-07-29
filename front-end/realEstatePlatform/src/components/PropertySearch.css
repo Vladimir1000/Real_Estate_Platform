@@ -22,7 +22,7 @@ body {
 }
 
 .home-button, .properties-button {
-  background: linear-gradient(135deg, #ffdb58, #ffbb33);
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
   color: #4b2e2e;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -33,7 +33,7 @@ body {
 }
 
 .home-button:hover, .properties-button:hover {
-  background-color: #ff4500;
+  background-color: #000000;
   color: #fff;
   transform: scale(1.05);
 }
@@ -44,7 +44,7 @@ button {
   margin-top: 10px;
   font-size: 16px;
   color: black;
-  background-color: #ffdb58;
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -52,14 +52,14 @@ button {
 }
 
 button:hover {
-   background-color: #ff4500;
+   background-color: #000000;
   color: #fff;
   transform: scale(1.05);
 }
 
 
 .property-card {
-  background: linear-gradient(135deg, #fff, #f5f5dc);
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(75, 46, 46, 0.1);
   padding: 1.5rem;
@@ -104,7 +104,7 @@ button:hover {
 
 h2 {
   font-family: 'Homemade Apple', cursive;
-  color: #800000;
+  color: #000000;
   margin-bottom: 2rem;
   font-size: 2rem;
   letter-spacing: 2px;

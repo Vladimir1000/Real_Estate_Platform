@@ -2,9 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import PropertySearch from './PropertySearch';
-import Levenshtein from 'fast-levenshtein';
-// here I should import my Logo when it is ready
-import './Home.css';
+import './Home.css'
 
 const PROPERTY_PATH = 'http://127.0.0.1:8000';
 
@@ -57,37 +55,6 @@ const Header = () => {
         };
     }, []);
 
-    // const handleSearchChange = (e) => {
-    //     setSearchQuery(e.target.value);
-    // };
-
-    // const handleSearchSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         const response = await axios.get(`${PROPERTY_PATH}/properties/search/`, { params: { query: searchQuery } });
-    //         const properties = response.data;
-
-    //         if (properties.length > 0) {
-    //             navigate(`/property/${properties[0].id}`);
-    //         } else {
-    //             const potentialMatches = properties.map(property => ({
-    //                 ...property,
-    //                 similarity: Levenshtein.get(searchQuery.trim().toLowerCase(), property.title.toLowerCase())
-    //             }));
-    //             potentialMatches.sort((a, b) => a.similarity - b.similarity);
-
-    //             navigate('/search', {
-    //                 state: {
-    //                     searchQuery,
-    //                     potentialMatches
-    //                 }
-    //             });
-    //         }
-    //     } catch (error) {
-    //         console.error('Error fetching data:', error);
-    //         alert('There was an error processing your search.');
-    //     }
-    // };
 
     const toggleUserMenu = () => {
         setShowUserMenu(!showUserMenu);
@@ -152,7 +119,7 @@ const Header = () => {
                             )}
                         </div>
                     ) : (
-                        <button onClick={toggleLoginForm}>Log In</button>
+                        <button onClick={toggleLoginForm}>LogIn</button>
                     )}
                     {showLoginForm && (
                         <div className="loginOverlay" ref={loginFormRef}>

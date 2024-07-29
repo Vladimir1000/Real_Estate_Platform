@@ -42,7 +42,7 @@ const PropertySearch = () => {
             <button className="home-button" onClick={() => navigate('/')}>HOME</button>
             <button className="properties-button" onClick={() => navigate('/properties')}>PROPERTIES</button>
         </div>
-      <h2>Search Properties</h2>
+      <h2>Find the right home at the right price</h2>
       <input
         type="text"
         name="price_min"

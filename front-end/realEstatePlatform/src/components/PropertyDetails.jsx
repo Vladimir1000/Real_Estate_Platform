@@ -246,9 +246,8 @@ export default function PropertyDetails() {
     });
     const [isEditing, setIsEditing] = useState(false);
     const [loading, setLoading] = useState(true);
-    ////////////////////////////////////new line of code
+    /// Booking state
     const [bookingStatus, setBookingStatus] = useState('');
-///////////////////////////////////////////////////////
     // const [userProperties, setUserProperties] = useState([]);
 
     useEffect(() => {
@@ -303,7 +302,7 @@ export default function PropertyDetails() {
         await axios.delete(`${PROPERTY_PATH}${id}/`);
         navigate('/properties');
     };
-//////////////////////////new line of code///////////////////////////////
+///////  Handles User Booking  /////
     const handleBooking = async () => {
         try {
             const response = await axios.post('http://127.0.0.1:8000/bookings/create/', {
@@ -316,7 +315,6 @@ export default function PropertyDetails() {
         }
     };
     
-/////////////////////////////////////////////////////////////////
     const toggleEdit = () => {
         setIsEditing(!isEditing);
     };
@@ -425,11 +423,11 @@ export default function PropertyDetails() {
                     <img src={property.photo_url} alt={property.title} />
                     <MapComponent lat={parseFloat(property.latitude) || 0} lng={parseFloat(property.longitude) || 0} onClick={handleMapClick} />
                     <div className="button-container">
-                        <button onClick={toggleEdit}>Edit</button>
+                        <button className="editButton" onClick={toggleEdit}>Edit</button>
                         {id && id !== 'new' && <button className="deleteButton" onClick={handleDelete}>Delete</button>}
                     </div>
                     <div className="booking-section">
-                        <button onClick={handleBooking}>Book this property</button>
+                        <button className="bookingButton" onClick={handleBooking}>Book this property</button>
                         {bookingStatus && <p>{bookingStatus}</p>}
                     </div>
                 </>

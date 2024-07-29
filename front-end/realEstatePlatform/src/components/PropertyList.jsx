@@ -38,7 +38,7 @@ export default function Properties() {
   return (
     <div className="properties">
       <Nav />
-      <h1>Properties Page</h1>
+      <h1>Recomended Properties</h1>
       <button onClick={handleCreate}>Create New Property</button>
       <div className="property-grid">
         {properties.map((property) => {
@@ -49,7 +49,7 @@ export default function Properties() {
               <p>Description: {property.description}</p>
               <p>Address: {property.address}</p>
               <p>City: {property.city}</p>
-              <p>Size: {property.size}</p>
+              <p>Size: {property.size} sq.ft.</p>
               <p>Type: {property.type}</p>
               <p>Status: {property.status}</p>
               <p>Price: ${property.price}</p>

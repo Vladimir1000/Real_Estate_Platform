@@ -18,7 +18,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  background: linear-gradient(135deg, #fff, #f5f5dc);
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(75, 46, 46, 0.1);
   text-align: center;
@@ -27,7 +27,7 @@ body {
 
 .propertyDetails h1 {
   font-family: 'Amatic SC', cursive;
-  color: #800000;
+  color: #000000;
   font-size: 4rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
@@ -38,16 +38,17 @@ body {
 
 .propertyDetails h2 {
   font-family: 'Amatic SC', cursive;
-  color: #800000;
+  color: #000000;
   font-size: 2.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .propertyDetails p {
-  color: #4b2e2e;
+  color: #000000;
   margin-bottom: 1rem;
-  font-size: 1.4rem;
+  font-size: 25px;
+  font-weight: bold;
   letter-spacing: 0.5px;
   text-align: center;
 }
@@ -58,20 +59,20 @@ body {
   gap: 1rem;
 }
 
-.propertyDetails label {
-  color: #4b2e2e;
-  font-size: 1.2rem;
+/* .propertyDetails label {
+  color: #000000;
+  font-size: 12rem;
   margin-bottom: 0.5rem;
-}
+} */
 
-.propertyDetails input, .propertyDetails select {
+.propertyDetails input {
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.propertyDetails input[type="text"], .propertyDetails input[type="number"], .propertyDetails select {
+.propertyDetails input[type="text"], .propertyDetails input[type="number"] {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -79,12 +80,9 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 1.5rem;
-  background-color: #ffdb58;
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
 }
 
-.propertyDetails select option:hover {
-  background-color: yellow;
-}
 
 .propertyDetails textarea {
   width: 100%;
@@ -95,14 +93,14 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 1.5rem;
-  background-color: #ffdb58;
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
 }
 
 .propertyDetails button {
   padding: 10px 20px;
   font-size: 16px;
   color: black;
-  background-color: #ffdb58;
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -110,12 +108,31 @@ body {
   margin-top: 20px;
 }
 
+.propertyDetails .editButton {
+  background-color: #ffffff;
+}
+
+.propertyDetails .editButton:hover {
+  background-color: #000000;
+  color: white;
+}
+
 .propertyDetails .deleteButton {
-  background-color: #ff4500;
+  background-color: #ffffff;
 }
 
 .propertyDetails .deleteButton:hover {
-  background-color: #ff4500;
+  background-color: #000000;
+  color: white;
+}
+
+.propertyDetails .bookingButton {
+  background-color: #ffffff;
+}
+
+.propertyDetails .bookingButton:hover {
+  background-color: #000000;
+  color: white;
 }
 
 .propertyDetails .button-container {
@@ -128,9 +145,18 @@ body {
   content: '';
   display: block;
   height: 4px;
-  background: linear-gradient(90deg, #ff4500, #ffdb58);
+  background: linear-gradient(90deg, #7a7cdd, #ffdb58);
   margin-top: 2rem;
   border-radius: 2px;
+}
+
+.propertyDetails img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {

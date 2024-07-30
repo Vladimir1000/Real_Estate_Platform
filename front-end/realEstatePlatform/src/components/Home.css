@@ -121,34 +121,6 @@ body {
   background-color: #000000;
   color: white;
 }
-/* 
-.property-search {
-  margin-top: 2rem;
-}
-
-.property-search input {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.property-search button {
-  background: linear-gradient(135deg, #ffdb58, #ffbb33);
-  color: #4b2e2e;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 0.5rem;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.property-search button:hover {
-  background-color: #ff4500;
-  color: #fff;
-  transform: scale(1.05);
-} */
 
 @media (max-width: 768px) {
   .header {

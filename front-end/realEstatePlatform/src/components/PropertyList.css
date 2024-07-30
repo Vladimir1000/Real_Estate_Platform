@@ -1,18 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400&display=swap');
-/* 
-body {
-  background-color: rgba(128, 162, 236, 0.678);     
-  background-image:  
-    linear-gradient(45deg, #f5f5dc 25%, transparent 25%),
-    linear-gradient(-45deg, #f5f5dc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #f5f5dc 75%),
-    linear-gradient(-45deg, transparent 75%, #f5f5dc 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-  color: #4b2e2e;              
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-} */
 
 .properties {
   max-width: 1200px;
@@ -67,17 +53,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* 
-.property-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,219,88,0.1) 0%, rgba(255,219,88,0) 70%);
-  transform: rotate(30deg);
-} */
 
 .property-card:hover {
   transform: translateY(-5px);
@@ -110,26 +85,9 @@ body {
   margin-top: 1rem;
 }
 
-/* .property-card::after {
-  content: '';
-  display: block;
-  height: 4px;
-  background: linear-gradient(90deg, #7a7cdd, #ffdb58);
-  margin-top: 1rem;
-  border-radius: 2px;
-} */
-
 .property-card:hover h2 {
   color: #4b4848; 
 }
-
-/* .highlight {
-  background: linear-gradient(90deg, #ffdb58, #ff4500);
-  color: #4b2e2e;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-weight: bold;
-} */
 
 @media (max-width: 768px) {
   .property-grid {

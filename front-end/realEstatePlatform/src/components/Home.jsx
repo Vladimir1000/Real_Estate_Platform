@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import PropertySearch from './PropertySearch';
@@ -15,7 +14,6 @@ const Header = () => {
     const [users, setUsers] = useState([]);
     const loginFormRef = useRef(null);
     const userMenuRef = useRef(null);
-    // const navigate = useNavigate();
     const loggedInUser = localStorage.getItem('loggedInUser');
 
     useEffect(() => {

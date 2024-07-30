@@ -5,9 +5,6 @@ import MapComponent from './MapComponent';
 import Nav from "./Nav";
 import './PropertyDetails.css';
 
-
-
-
 const PROPERTY_PATH = "http://127.0.0.1:8000/properties/";
 
 export default function PropertyDetails() {
@@ -32,7 +29,6 @@ export default function PropertyDetails() {
     const [loading, setLoading] = useState(true);
     /// Booking state
     const [bookingStatus, setBookingStatus] = useState('');
-    // const [userProperties, setUserProperties] = useState([]);
 
     useEffect(() => {
         if (id && id !== 'new') {
@@ -46,26 +42,7 @@ export default function PropertyDetails() {
             setLoading(false);
         }
     }, [id]);
-
-    // useEffect(() => {
-    //   const getUserProperties = async () => {
-    //       try {
-    //           const response = await axios.get(`http://127.0.0.1:8000/users/${loggedInUser}`);
-    //           if (response.data.properties && Array.isArray(response.data.properties)) {
-    //               const properties = await Promise.all(
-    //                   response.data.properties.map(propertyUrl => axios.get(propertyUrl))
-    //               );
-    //               setUserProperties(properties.map(propertyResponse => propertyResponse.data));
-    //           }
-    //       } catch (error) {
-    //           console.error('Could not fetch user properties', error);
-    //       }
-    //   };
-    //   getUserProperties();
-
-    // }, [loggedInUser]);
   
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setProperty({ ...property, [name]: value });
@@ -109,29 +86,7 @@ export default function PropertyDetails() {
             latitude: e.latLng.lat().toString(),
             longitude: e.latLng.lng().toString()
         });
-    };
-
-    // const addToMyProperties = async (propertyId) => {
-    //   try {
-    //     await axios.post(`http://127.0.0.1:8000/users/${loggedInUser}/bookings/`, { property_id: propertyId });
-    //     console.log(`http://127.0.0.1:8000/users/${loggedInUser}`)
-    //     setUserProperties([...userProperties, property]);
-    //   } catch (error) {
-    //     console.error('Could not add property to user', error);
-    //   }
-    // };
-  
-    // const removeFromMyProperties = async (propertyId) => {
-    //   try {
-    //     await axios.post(`http://127.0.0.1:8000/users/${loggedInUser}/bookings/`, { property_id: propertyId });
-    //     setUserProperties(userProperties.filter(p => p.id !== propertyId));
-    //   } catch (error) {
-    //     console.error('Could not remove property from user', error);
-    //   }
-    // };
-  
-    // const isUserManaging = userProperties.some(p => p.id === property.id);
-  
+    };  
 
     if (loading) {
         return <h3>Loading...</h3>;
@@ -191,13 +146,6 @@ export default function PropertyDetails() {
                     </form>
                 ) : (
                     <>
-                        {/* {loggedInUser && (
-                        isUserManaging ? (
-                            <button className="manageButton" onClick={() => removeFromMyProperties(property.id)}>Stop Managing</button>
-                        ) : (
-                            <button className="manageButton" onClick={() => addToMyProperties(property.id)}>Manage</button>
-                        )
-                        )} */}
                         <h1>{property.title}</h1>
                         <h2>Address: {property.address} {property.city}</h2>
                         <p>Description: {property.description}</p>

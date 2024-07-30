@@ -1,18 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400&display=swap');
-/* 
-body {
-  background-color: #f5f5dc;     
-  background-image:  
-    linear-gradient(45deg, #f5f5dc 25%, transparent 25%),
-    linear-gradient(-45deg, #f5f5dc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #f5f5dc 75%),
-    linear-gradient(-45deg, transparent 75%, #f5f5dc 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-  color: #4b2e2e;              
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-} */
 
 .home-buttons {
   display: flex;
@@ -73,17 +59,6 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-/* .property-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,219,88,0.1) 0%, rgba(255,219,88,0) 70%);
-  transform: rotate(30deg);
-} */
-
 .property-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(75, 46, 46, 0.15);
@@ -93,7 +68,6 @@ button:hover {
   font-family: 'Poppins', cursive;
   font-weight: bold;
   color: #000000;
-  /* margin-bottom: 1rem; */
   font-size: 1.5rem;
   letter-spacing: 1px;
   position: relative;

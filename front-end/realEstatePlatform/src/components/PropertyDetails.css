@@ -65,7 +65,6 @@
   background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
 }
 
-
 .propertyDetails textarea {
   width: 100%;
   height: 200px;
@@ -117,9 +116,7 @@
   color: white;
 }
 
-
-
-.propertyDetails .submit:hover{
+.propertyDetails .submit:hover {
   background-color: #000000;
   color: white;
 }
@@ -139,16 +136,40 @@
   margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .propertyDetails {
     padding: 1rem;
+    margin-top: 20px;
   }
 
   .propertyDetails h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    padding: 1rem;
   }
 
   .propertyDetails h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .propertyDetails p {
+    font-size: 1.25rem;
+  }
+
+  .propertyDetails form {
+    gap: 0.5rem;
+  }
+
+  .propertyDetails input[type="text"], .propertyDetails input[type="number"], .propertyDetails textarea {
+    font-size: 1rem;
+  }
+
+  .propertyDetails button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+
+  .propertyDetails img {
+    height: 200px;
   }
 }

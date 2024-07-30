@@ -34,7 +34,6 @@
 .properties button:hover {
   background-color: #000000;
   color: #fff;
-
 }
 
 .property-grid {
@@ -88,12 +87,43 @@
   color: #4b4848; 
 }
 
-@media (max-width: 768px) {
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .properties {
+    padding: 1rem;
+  }
+
+  .properties h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .properties button {
+    font-size: 14px;
+    padding: 0.6em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
   .property-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  
-  .properties h1 {
-    font-size: 2rem; 
+
+  .property-card {
+    padding: 1rem;
+  }
+
+  .property-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .property-card p {
+    font-size: 16px;
+  }
+
+  .property-card img {
+    height: 150px;
   }
 }

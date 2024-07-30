@@ -46,7 +46,6 @@ button:hover {
   padding: 0.8em;
 }
 
-
 .property-card {
   background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   border-radius: 8px;
@@ -100,18 +99,8 @@ input[type="text"] {
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  input[type="text"] {
-    width: 100%;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .property-card {
-    margin-bottom: 1rem;
-  }
+/* Media query for smaller screens */
+@media (max-width: 600px) {
   .home-buttons {
     flex-direction: column;
     align-items: center;
@@ -122,5 +111,30 @@ input[type="text"] {
     font-size: 14px;
     padding: 0.5rem 1rem;
   }
-}
 
+  button {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .property-card {
+    padding: 1rem;
+  }
+
+  .property-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .property-card p {
+    font-size: 0.8rem;
+  }
+}

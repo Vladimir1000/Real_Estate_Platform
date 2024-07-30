@@ -8,7 +8,7 @@
 }
 
 .home-button, .properties-button {
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   color: #000000;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -29,7 +29,7 @@ button {
   margin-top: 10px;
   font-size: 16px;
   color: black;
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -48,7 +48,7 @@ button:hover {
 
 
 .property-card {
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.678),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(75, 46, 46, 0.1);
   padding: 1.5rem;

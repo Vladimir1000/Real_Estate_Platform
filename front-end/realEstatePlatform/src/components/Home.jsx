@@ -5,8 +5,7 @@ import './Home.css'
 
 const PROPERTY_PATH = 'http://127.0.0.1:8000';
 
-const Header = () => {
-    const [searchQuery, setSearchQuery] = useState('');
+const Home = () => {
     const [userData, setUserData] = useState({});
     const [showUserMenu, setShowUserMenu] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
@@ -90,9 +89,9 @@ const Header = () => {
     };
 
     return (
-        <div className="header">
+        <div className="home-container">
             <div className='home'>
-                <div className="headerLinks">
+                <div className="homeLinks">
                     {loggedInUser ? (
                         <div className="userMenu" ref={userMenuRef}>
                             <img onClick={toggleUserMenu} src={userData.user_photo} alt="User" />
@@ -123,4 +122,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Home;

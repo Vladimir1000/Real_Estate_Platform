@@ -15,12 +15,12 @@ body {
 }
 
 
-.headerLinks {
+.homeLinks {
   display: flex;
   align-items: center;
 }
 
-.headerLinks button {
+.homeLinks button {
   border: none;
   color: #000000;
   font-family: 'Poppins', cursive;
@@ -31,7 +31,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.headerLinks button:hover {
+.homeLinks button:hover {
   color: #fcfcfc;
 }
 
@@ -50,7 +50,7 @@ body {
   position: absolute;
   right: 0;
   top: 100%;
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
@@ -75,9 +75,9 @@ body {
 
 .loginOverlay {
   position: fixed;
-  top: 120px;
-  left: 30px;
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
+  top: 20px;
+  left: 150px;
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -107,7 +107,7 @@ body {
   display: block;
   padding: 5px;
   width: 100%;
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   color: #000000;
   border: none;
   padding: 0.5rem 1rem;
@@ -123,7 +123,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .header {
+  .home-container {
     flex-direction: column;
     padding: 1rem;
   }
@@ -132,12 +132,12 @@ body {
     margin: 1rem 0;
   }
 
-  .headerLinks {
+  .homeLinks {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .headerLinks button {
+  .homeLinks button {
     margin: 0.5rem;
   }
 }

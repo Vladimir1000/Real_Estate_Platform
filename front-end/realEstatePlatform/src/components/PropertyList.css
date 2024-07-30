@@ -24,7 +24,7 @@
   font-size: 16px;
   padding: 0.8em;
   color: black;
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -44,7 +44,7 @@
 }
 
 .property-card {
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(75, 46, 46, 0.1);
   padding: 1.5rem;

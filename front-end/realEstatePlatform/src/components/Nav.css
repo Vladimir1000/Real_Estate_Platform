@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400&display=swap');
 
 .Nav {
-  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.301),  rgba(238, 245, 218, 0.678));
+  background: linear-gradient(135deg,  rgba(128, 162, 236, 0.850),  rgba(238, 245, 218, 0.678));
   padding: 5px;
   box-shadow: 0 4px 6px #4b2e2e1a;
 }

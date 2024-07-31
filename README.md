@@ -3,7 +3,7 @@
 This web application is designed to manage real estate properties, users, and bookings. It is built using Django, PostgreSQL for the backend,React and Vite for the frontend. The application supports full CRUD operations and includes search functionality.
 
 ## Table of Contents
-- [Installation](#installation)
+- [Installation](#instalation)
 - [Backend Structure](#backend-structure)
 - [Diagrams](#diagrams)
   - [ERD](#erd)
